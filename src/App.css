@@ -1,0 +1,145 @@
+/* App container with background image */
+.App {
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  background: url('c.jpg') center/cover no-repeat, linear-gradient(135deg, #9696cb, #302e73);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Main heading */
+h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Todo wrapper */
+.TodoWrapper {
+  background: rgba(47, 47, 72, 0.9);
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Form styles */
+.TodoForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* Space between input and button */
+  margin-bottom: 1.5rem;
+}
+
+/* Input field */
+.todo-input {
+  background: none;
+  border: 2px solid #8758ff;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  flex: 1; /* Makes the input grow to fill available space */
+  min-width: 200px;
+  max-width: 350px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.todo-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.todo-input:focus {
+  border-color: #c08bff;
+  box-shadow: 0 0 8px rgba(192, 139, 255, 0.8);
+  outline: none;
+}
+
+/* Add button */
+.todo-btn {
+  background: #8758ff;
+  color: #ffffff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+.todo-btn:hover {
+  background: #6a46d9;
+  transform: scale(1.03);
+}
+
+.todo-btn:active {
+  transform: scale(1);
+}
+
+/* Todo items */
+.Todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #6a46d9;
+  color: #ffffff;
+  padding: 0.9rem 1.2rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.Todo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(106, 70, 217, 0.5);
+}
+
+/* Completed todo */
+.completed {
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Todo icons */
+.edit-icon,
+.delete-icon {
+  cursor: pointer;
+  margin-left: 0.5rem;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.edit-icon:hover {
+  color: #ffd700;
+}
+
+.delete-icon:hover {
+  color: #ff6b6b;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .todo-input {
+    width: 90%;
+  }
+
+  .todo-btn {
+    width: auto;
+  }
+
+  .TodoWrapper {
+    padding: 1.5rem 1rem;
+  }
+}
